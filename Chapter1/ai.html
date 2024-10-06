@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Clock and Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #clock {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website with a Clock</h1>
+    
+    <div id="clock"></div>
+    
+    <p>Click the links below to visit popular websites:</p>
+    
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentTime = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = currentTime;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to display the clock immediately
+        updateClock();
+    </script>
+</body>
+</html>
