@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in the Html</title>
+    <style>
+        /* Table Container Styling */
+.table-container {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Basic Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Table Header Styling */
+table thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border: 2px solid #0a0909;
+}
+
+/* Table Body Styling */
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    text-align: left;
+    border: 2px solid black;
+}
+
+/* Zebra Striping for Rows */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling inside Table */
+table tbody td .btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+table tbody td .btn-edit {
+    background-color: #f0ad4e;
+}
+
+table tbody td .btn-delete {
+    background-color: #d9534f;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    table thead {
+        display: none;
+    }
+    table tbody td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+    table tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>This is the table </h1>
+    <table>
+        <!-- head of the table -->
+        <thead>
+            <tr>
+                <th> name</th>
+                <th> role</th>
+                <th> salary</th>
+            </tr>
+        </thead>
+        <!-- body of the table  -->
+        <tbody>
+            <tr>
+                <td>Kashif</td>
+                <td>Softwear Developer</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>Kamran</td>
+                <td>Softwear Developer</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>Foziya</td>
+                <td>Softwear Developer</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>Zain</td>
+                <td>Softwear Developer</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>Zain</td>
+                <td colspan="2">High</td>
+
+            </tr>
+            <tr>
+                <td colspan="3"> Thank You</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
